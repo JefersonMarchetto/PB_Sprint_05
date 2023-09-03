@@ -1,17 +1,18 @@
 Dado('que acesse a home') do
-  visit ('https://www.google.com/')
+  @Google_home= Google_home.new
+  @Google_home.load
 end
 
 Então('deverá exibir o logo da Google') do
-  expect(page).to  have_content 'Gmail'
-  expect(page).to  have_css '.lnXdpd'
+  expect(@Google_home).to  have_content 'Gmail'
+  expect(@Google_home).to  have_css '.lnXdpd'
 end
 
 Quando('buscar por {string}') do |termo|
-  find("textarea[name='q']").set termo
-  find(".gNO89b").click
+  @Google_home.search_for(termo)
+  @Google_results = GoogleResults.new
 end
 
 Então('deverão ser encontrados resultados') do
-  expect(page).to have_content 'jeep compass'
+  expect(@Google_results).to have_content 'jeep compass'
 end
