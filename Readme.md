@@ -1,104 +1,54 @@
-<!DOCTYPE html>
-<html>
+# SitePrismCucumber - Projeto de Teste Automatizado
 
-<head>
-    <title> Projeto de Teste Automatizado</title>
-</head>
+Este projeto é um exemplo de automação de testes web usando Cucumber, Capybara, RSpec, SitePrism e Selenium WebDriver.
 
-<body>
+## Pré-requisitos
 
-    <h1> Projeto de Teste Automatizado</h1>
+Antes de começar, certifique-se de que seu ambiente de desenvolvimento atenda aos seguintes pré-requisitos:
 
-    <p>Este projeto é um exemplo de automação de testes web usando Cucumber, Capybara, RSpec, SitePrism e Selenium WebDriver.</p>
+- Ruby (versão especificada no arquivo `.ruby-version`)
+- RubyGems
+- Bundler
+- ChromeDriver (a versão do ChromeDriver deve ser compatível com a versão do Google Chrome instalada em seu sistema)
 
-    <h2>Pré-requisitos</h2>
+## Instalação
 
-    <p>Antes de começar, certifique-se de que seu ambiente de desenvolvimento atenda aos seguintes pré-requisitos:</p>
+Siga estas etapas para configurar o ambiente de desenvolvimento:
 
-    <ul>
-        <li>Ruby (versão especificada no arquivo <code>.ruby-version</code>)</li>
-        <li>RubyGems</li>
-        <li>Bundler</li>
-        <li>ChromeDriver (a versão do ChromeDriver deve ser compatível com a versão do Google Chrome instalada em seu sistema)</li>
-    </ul>
+1. Clone este repositório em seu computador:
+ <https://github.com/JefersonMarchetto/PB_Sprint_05.git/>
+2. Instale as dependências do projeto com o Bundler:
+`bundle install`
 
-    <h2>Instalação</h2>
+## Execução dos Testes
 
-    <p>Siga estas etapas para configurar o ambiente de desenvolvimento:</p>
+Para executar os cenários de teste, utilize o comando abaixo:
+`bundle exec cucumber`
 
-    <ol>
-        <li>Clone este repositório em seu computador:</li>
+## Configuração
 
-        <pre>
-            <code>
-git clone https://github.com/JefersonMarchetto/PB_Sprint_05.git
-            </code>
-        </pre>
+Este projeto utiliza variáveis de ambiente para definir a configuração do ambiente de teste. Certifique-se de que as variáveis de ambiente necessárias estão configuradas corretamente no seu sistema ou em um arquivo de configuração específico.
 
-        <li>Instale as dependências do projeto com o Bundler:</li>
+## Estrutura do Projeto
 
-        <pre>
-            <code>
-bundle install
-            </code>
-        </pre>
-    </ol>
+- `features/`: Contém os arquivos de especificação de recursos escritos em Gherkin.
+- `features/support/`: Contém arquivos de suporte, incluindo `env.rb` para configuração do ambiente de teste.
+- `features/step_definitions/`: Contém as etapas (steps) implementadas em Ruby para executar os cenários de teste.
+- `lib/`: Contém as classes SitePrism que modelam as páginas da web.
+- `config/`: Pode conter arquivos de configuração adicionais, como arquivos YAML para diferentes ambientes.
 
-    <h2>Execução dos Testes</h2>
+## Contribuição
 
-    <p>Para executar os cenários de teste, utilize o comando abaixo:</p>
+Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
 
-    <pre>
-        <code>
-bundle exec cucumber
-        </code>
-    </pre>
+1. Faça um fork deste repositório.
+2. Crie uma nova branch com sua contribuição: `git checkout -b minha-contribuicao`
+3. Faça as alterações desejadas e faça commit: `git commit -m "Minha contribuição"`
+4. Envie suas alterações: `git push origin minha-contribuicao`
+5. Abra um Pull Request para revisão.
 
-    <h2>Configuração</h2>
+## Autores
 
-    <p>Este projeto utiliza variáveis de ambiente para definir a configuração do ambiente de teste. Certifique-se de que as variáveis de ambiente necessárias estão configuradas corretamente no seu sistema ou em um arquivo de configuração específico.</p>
-
-    <p>Para executar cenario de Produção use comando abaixo:</p>
-    <code>
-    bundle exec cucumbe -p prd
-    <\code>
-    <p>Para executar cenario de Produção use comando abaixo:</p>
-    <code>
-    bundle exec cucumbe -p hml
-    <\code>
-
-    <h2>Estrutura do Projeto</h2>
-
-    <ul>
-        <li><code>features/</code>: Contém os arquivos de especificação de recursos escritos em Gherkin.</li>
-        <li><code>features/support/</code>: Contém arquivos de suporte, incluindo <code>env.rb</code> para configuração do ambiente de teste.</li>
-        <li><code>features/step_definitions/</code>: Contém as etapas (steps) implementadas em Ruby para executar os cenários de teste.</li>
-        <li><code>lib/</code>: Contém as classes SitePrism que modelam as páginas da web.</li>
-        <li><code>config/</code>: Pode conter arquivos de configuração adicionais, como arquivos YAML para diferentes ambientes.</li>
-    </ul>
-
-    <h2>Contribuição</h2>
-
-    <p>Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:</p>
-
-    <ol>
-        <li>Faça um fork deste repositório.</li>
-        <li>Crie uma nova branch com sua contribuição: <code>git checkout -b minha-contribuicao</code></li>
-        <li>Faça as alterações desejadas e faça commit: <code>git commit -m "Minha contribuição"</code></li>
-        <li>Envie suas alterações: <code>git push origin minha-contribuicao</code></li>
-        <li>Abra um Pull Request para revisão.</li>
-    </ol>
-
-    <h2>Autores</h2>
-
-    <ul>
-        <li><a href="https://github.com/seu-usuario">Seu Nome</a> - Desenvolvedor principal</li>
-    </ul>
-
-
-
-</body>
-
-</html>
+- [Jeferson Marchetto]
 
 
