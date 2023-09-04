@@ -1,6 +1,7 @@
 require 'capybara'
 require 'capybara/cucumber'
 require 'capybara/dsl'
+require 'capybara'
 require 'selenium-webdriver'
 require 'rspec'
 Capybara.register_driver :selenium do |app|
